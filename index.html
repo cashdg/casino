@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casino</title>
+    <title>Casino Buttons</title>
     <style>
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Centers vertically */
-            align-items: center; /* Centers horizontally */
-            height: 100vh; /* Use the full height of the viewport */
-            margin: 0; /* Remove default margin */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             font-family: Arial, sans-serif;
             background-color: rgb(0, 0, 0);
             background-size: cover;
@@ -21,10 +21,18 @@
             padding: 20px;
             animation: backgroundAnimation 20s infinite alternate;
         }
-        @keyframes backgroundAnimation {
+            @keyframes backgroundAnimation {
             0% { filter: brightness(100%); }
             50% { filter: brightness(150%); }
             100% { filter: brightness(100%); }
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
         .button {
             background-color: #920f0f; /* Green */
@@ -44,6 +52,10 @@
             background-color: #920f0f;
             transform: scale(1.1);
         }
+            .button:hover span {
+    display: inline-block;
+    animation: spin 0.5s ease-in-out;
+}    
         @media (max-width: 768px) {
             .button {
                 padding: 10px 24px;
@@ -51,13 +63,13 @@
             }
         }
     </style>
-</head>
+    </head>
 <body>
-    <h1>site name ♥</h1>
-    <button class="button">Slot Machine</button>
-    <button class="button">Roulette</button>
-    <button class="button">Blackjack</button>
-    <button class="button">Poker</button>
-    <button class="button">Baccarat</button>
+    <h1>casino ♥</h1>
+    <button class="button"><span>Slot Machine</span></button>
+    <button class="button"><span>Roulette</span></button>
+    <button class="button"><span>Blackjack</span></button>
+    <button class="button"><span>Poker</span></button>
+    <button class="button"><span>Baccarat</span></button>
 </body>
 </html>
